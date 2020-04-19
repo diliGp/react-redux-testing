@@ -1,0 +1,3 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Counter with State Should capture snapshot to render without error 1`] = `ShallowWrapper {}`;
