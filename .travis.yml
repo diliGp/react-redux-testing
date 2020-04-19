@@ -28,6 +28,5 @@ jobs:
         region: "us-east-2"
         app: "React Testing"
         env: "ReactTesting-env"
-        skip-cleanup: true
         on:
           branch: master
