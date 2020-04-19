@@ -24,12 +24,12 @@ class CounterWithState extends Component {
     render() {
         return (
             <div data-test="container-state-counter">
-                <h1>Counter with state</h1>
+                <h1>Counter with State</h1>
                 <section>
                     <h2>Current count: {this.state.count}</h2>
                     <div>
-                        <button onClick={() => this.increment(1)}>+</button>
-                        <button onClick={() => this.decrement(1)}>-</button>
+                        <button data-test="increment-btn" onClick={() => this.increment(1)}>+</button>
+                        <button data-test="decrement-btn" onClick={() => this.decrement(1)}>-</button>
                     </div>
                 </section>
             </div>

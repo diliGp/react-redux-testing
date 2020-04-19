@@ -1,3 +1,31 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Counter with State Should capture snapshot to render without error 1`] = `ShallowWrapper {}`;
+exports[`Counter with State Should capture snapshot to render without error 1`] = `
+<div
+  data-test="container-state-counter"
+>
+  <h1>
+    Counter with State
+  </h1>
+  <section>
+    <h2>
+      Current count: 
+      0
+    </h2>
+    <div>
+      <button
+        data-test="increment-btn"
+        onClick={[Function]}
+      >
+        +
+      </button>
+      <button
+        data-test="decrement-btn"
+        onClick={[Function]}
+      >
+        -
+      </button>
+    </div>
+  </section>
+</div>
+`;
