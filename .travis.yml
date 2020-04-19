@@ -26,5 +26,6 @@ jobs:
         region: "us-east-2"
         app: "React Testing"
         env: "ReactTesting-env"
+        bucket_name: "travis-react-ut"
         on:
           branch: master
