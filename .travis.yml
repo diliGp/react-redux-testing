@@ -21,13 +21,13 @@ jobs:
         - yarn build
       deploy:
         provider: elasticbeanstalk
-          access_key_id:
-            secure: $ACCESS_KEY_ID
-          secret_access_key:
-            secure: $SECRET_ACCESS_KEY
-          region: "us-east-2"
-          app: "React Testing"
-          env: "ReactTesting-env"
-          skip-cleanup: true
-          on:
-            branch: master
+        access_key_id:
+          secure: $ACCESS_KEY_ID
+        secret_access_key:
+          secure: $SECRET_ACCESS_KEY
+        region: "us-east-2"
+        app: "React Testing"
+        env: "ReactTesting-env"
+        skip-cleanup: true
+        on:
+          branch: master
