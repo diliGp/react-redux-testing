@@ -1,0 +1,33 @@
+language: node_js
+node_js:
+  - 12
+cache:
+  yarn: true
+  directories:
+    - node_modules
+env:
+  - CI=true
+
+jobs:
+  include:
+    - stage: Tests
+      name: Eslint
+      script: yarn run list:js
+    - name: Unit Tests
+      script: yarn test
+    - stage: Deployment
+      name: Deploy to AWS Elastic Beanstalk
+      before_deploy:
+        - yarn build
+      deploy:
+        provider: elasticbeanstalk
+          access_key_id:
+            secure: $ACCESS_KEY_ID
+          secret_access_key:
+            secure: $SECRET_ACCESS_KEY
+          region: "us-east-2"
+          app: "React Testing"
+          env: "ReactTesting-env"
+          skip-cleanup: true
+          on:
+            branch: master
