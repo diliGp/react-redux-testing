@@ -2,7 +2,6 @@ import React from 'react'
 import { connect } from 'react-redux';
 import { incrementCounter, decrementCounter } from '../actions/counter';
 
-
 const Counter = ({ count, incrementCounter, decrementCounter }) => {
     return (
         <section data-test="container-counter">
